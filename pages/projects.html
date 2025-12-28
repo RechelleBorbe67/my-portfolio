@@ -1,73 +1,659 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Rechelle Borbe</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main CSS -->
   <link rel="stylesheet" href="../style.css">
+  
+  <style>
+    /* Projects Page Styles */
+    .projects-page {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+    
+    .page-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .page-header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      color: #111;
+      margin-bottom: 1rem;
+    }
+    
+    .page-header p {
+      color: #666;
+      font-size: 1.2rem;
+      line-height: 1.7;
+    }
+    
+    /* Project Details Section */
+    .project-details {
+      max-width: 1000px;
+      margin: 0 auto 5rem;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    }
+    
+    .project-hero {
+      height: 350px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .project-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .project-tags {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      display: flex;
+      gap: 10px;
+    }
+    
+    .project-tag {
+      background: rgba(102, 126, 234, 0.95);
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    .project-content {
+      padding: 3rem;
+    }
+    
+    .project-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.2rem;
+      color: #111;
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    
+    .feature-card {
+      background: #f8f9ff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border-left: 4px solid #667eea;
+    }
+    
+    .feature-card h4 {
+      color: #111;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .feature-card h4 i {
+      color: #667eea;
+    }
+    
+    .feature-card p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    
+    /* Tech Stack */
+    .tech-stack {
+      margin: 2.5rem 0;
+    }
+    
+    .tech-stack h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      color: #111;
+      margin-bottom: 1.5rem;
+    }
+    
+    .tech-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .tech-item {
+      background: white;
+      border: 1px solid #e0e7ff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      font-weight: 500;
+      color: #555;
+      transition: all 0.3s;
+    }
+    
+    .tech-item:hover {
+      background: #667eea;
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    /* Back Button */
+    .back-button {
+      text-align: center;
+      margin-top: 4rem;
+    }
+    
+    .back-button a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .back-button a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    }
+    
+    /* Project Navigation */
+    .project-nav {
+      max-width: 1000px;
+      margin: 3rem auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+    
+    .project-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.8rem 1.5rem;
+      border: 2px solid #e0e7ff;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    
+    .project-nav a:hover {
+      background: #f8f9ff;
+      border-color: #667eea;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .project-content {
+        padding: 2rem;
+      }
+      
+      .project-title {
+        font-size: 1.8rem;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <nav>
-    <h2 class="logo">RB</h2>
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="#ims">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-text">RB</span>
+        <span class="logo-full">Rechelle Borbe</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="../index.html#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="projects.html" class="active"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="../index.html#skills"><i class="fas fa-tools"></i> Skills</a></li>
+        <li><a href="contact.html" class="contact-btn"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </nav>
 
-  <section class="section" id="ims">
-    <h2>Inventory Management System (IMS)</h2>
-    <p>
-      The Inventory Management System (IMS) is a data-driven system designed to help organizations efficiently manage and track inventory levels, monitor stock movement, and improve storage and supply chain operations.
-    </p>
-    <ul>
-      <li>Inventory data management for categories, suppliers, discounts, and users</li>
-      <li>Generation of large, realistic datasets using Python and the Faker library</li>
-      <li>Business Intelligence (BI) and data analysis queries</li>
-      <li>Database performance optimization using indexing and batch processing</li>
-      <li>Backup and recovery procedures</li>
-      <li>Cloud deployment support for scalability</li>
-    </ul>
-    <p><strong>Technologies Used:</strong> Python 3.x, MySQL, Faker, MySQL Connector</p>
-    <p><strong>Role:</strong> Team Leader (Group Project)</p>
+  <!-- Projects Page Content -->
+  <section class="projects-page">
+    <div class="container">
+      <div class="page-header">
+        <h1>My Web Development Projects</h1>
+        <p>Explore the full-stack systems I've built, from concept to deployment. Each project showcases my skills in problem-solving, system architecture, and user-centered design.</p>
+      </div>
+
+      <!-- Inventory Management System -->
+      <section id="ims" class="project-details">
+        <div class="project-hero">
+          <img src="../assets/images/project1.png" alt="Inventory Management System">
+          <div class="project-tags">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Data Analysis</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <h2 class="project-title">Inventory Management System</h2>
+          
+          <p class="project-description">
+            A comprehensive enterprise solution designed to track, analyze, and optimize inventory operations. 
+            The system provides real-time visibility into stock levels, automates reordering processes, and 
+            generates actionable business intelligence reports for data-driven decision making.
+          </p>
+          
+          <div class="tech-stack">
+            <h3>Technology Stack</h3>
+            <div class="tech-items">
+              <span class="tech-item">PHP</span>
+              <span class="tech-item">MySQL</span>
+              <span class="tech-item">Python</span>
+              <span class="tech-item">Faker Library</span>
+              <span class="tech-item">JavaScript</span>
+              <span class="tech-item">Bootstrap</span>
+            </div>
+          </div>
+          
+          <h3 style="margin: 2rem 0 1.5rem; font-family: 'Poppins', sans-serif; color: #111;">Key Features</h3>
+          
+          <div class="features-grid">
+            <div class="feature-card">
+              <h4><i class="fas fa-chart-line"></i> Business Intelligence</h4>
+              <p>Advanced analytics and reporting for stock movement, sales trends, and inventory forecasting.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-database"></i> Database Optimization</h4>
+              <p>Indexing, batch processing, and query optimization for handling large datasets efficiently.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-cloud-upload-alt"></i> Cloud Deployment</h4>
+              <p>Scalable architecture with cloud integration for real-time accessibility and data backup.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-shield-alt"></i> Data Security</h4>
+              <p>Secure authentication, role-based access control, and automated backup/recovery system.</p>
+            </div>
+          </div>
+          
+          <div class="back-button">
+            <a href="../index.html#projects">
+              <i class="fas fa-arrow-left"></i> Back to All Projects
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- E-commerce System -->
+      <section id="dough" class="project-details">
+        <div class="project-hero">
+          <img src="../assets/images/project2.png" alt="E-commerce System">
+          <div class="project-tags">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">E-commerce</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <h2 class="project-title">Dough-to-Door Online Ordering System</h2>
+          
+          <p class="project-description">
+            A complete e-commerce platform for a bakery business, featuring a customer-facing storefront 
+            and a robust admin panel. The system handles everything from product management to order 
+            fulfillment with secure payment processing and inventory synchronization.
+          </p>
+          
+          <div class="tech-stack">
+            <h3>Technology Stack</h3>
+            <div class="tech-items">
+              <span class="tech-item">PHP</span>
+              <span class="tech-item">MySQL</span>
+              <span class="tech-item">HTML5/CSS3</span>
+              <span class="tech-item">JavaScript</span>
+              <span class="tech-item">XAMPP</span>
+              <span class="tech-item">Responsive Design</span>
+            </div>
+          </div>
+          
+          <h3 style="margin: 2rem 0 1.5rem; font-family: 'Poppins', sans-serif; color: #111;">System Features</h3>
+          
+          <div class="features-grid">
+            <div class="feature-card">
+              <h4><i class="fas fa-shopping-cart"></i> Shopping Cart</h4>
+              <p>Full-featured cart with add/remove items, quantity adjustment, and real-time price calculation.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-user-shield"></i> User Management</h4>
+              <p>Secure registration/login, profile management, and order history tracking for customers.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-tools"></i> Admin Dashboard</h4>
+              <p>Complete CRUD operations for products, categories, orders, and customer management.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-mobile-alt"></i> Responsive Design</h4>
+              <p>Mobile-first approach ensuring optimal shopping experience across all devices.</p>
+            </div>
+          </div>
+          
+          <div class="back-button">
+            <a href="../index.html#projects">
+              <i class="fas fa-arrow-left"></i> Back to All Projects
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Salon Reservation System -->
+      <section id="salon" class="project-details">
+        <div class="project-hero">
+          <img src="../assets/images/project3.png" alt="Salon Reservation System">
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">Real-time</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <h2 class="project-title">FlexiBook Salon Reservation System</h2>
+          
+          <p class="project-description">
+            A modern, real-time appointment booking system built with MERN stack. The platform features 
+            role-based access for customers and administrators, live availability checking, analytics 
+            dashboard, and automated email notifications for appointment confirmations.
+          </p>
+          
+          <div class="tech-stack">
+            <h3>Technology Stack</h3>
+            <div class="tech-items">
+              <span class="tech-item">React.js</span>
+              <span class="tech-item">Node.js</span>
+              <span class="tech-item">Express.js</span>
+              <span class="tech-item">MongoDB</span>
+              <span class="tech-item">JWT Auth</span>
+              <span class="tech-item">Chart.js</span>
+            </div>
+          </div>
+          
+          <h3 style="margin: 2rem 0 1.5rem; font-family: 'Poppins', sans-serif; color: #111;">Core Functionality</h3>
+          
+          <div class="features-grid">
+            <div class="feature-card">
+              <h4><i class="fas fa-calendar-check"></i> Real-time Booking</h4>
+              <p>Interactive calendar with live availability updates and instant booking confirmation.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-chart-pie"></i> Analytics Dashboard</h4>
+              <p>Visual reports for booking statistics, revenue tracking, and business performance insights.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-users-cog"></i> Role-based Access</h4>
+              <p>Separate interfaces for customers (booking) and admins (management & analytics).</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-bell"></i> Automated Notifications</h4>
+              <p>Email confirmations, reminders, and updates sent automatically to customers.</p>
+            </div>
+          </div>
+          
+          <div class="back-button">
+            <a href="../index.html#projects">
+              <i class="fas fa-arrow-left"></i> Back to All Projects
+            </a>
+          </div>
+        </div>
+      </section>
+
+            <!-- ShopHub E-commerce System -->
+      <section id="shophub" class="project-details">
+        <div class="project-hero">
+          <img src="../assets/images/project4.png" alt="ShopHub E-commerce System">
+          <div class="project-tags">
+            <span class="project-tag">MERN Stack</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">JWT Auth</span>
+            <span class="project-tag">REST API</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <div class="project-type-individual">
+            <i class="fas fa-user"></i> Individual Project
+          </div>
+          
+          <h2 class="project-title">ShopHub – Full-Stack E-commerce & API System</h2>
+          
+          <p class="project-description">
+            ShopHub is a full-stack web system developed as an individual laboratory repository project 
+            focusing on modern frameworks, NoSQL databases, and RESTful API design. The system implements 
+            secure authentication, role-based access, and analytics using MongoDB aggregation.
+          </p>
+          
+          <div class="tech-stack">
+            <h3>Technology Stack</h3>
+            <div class="tech-items">
+              <span class="tech-item">React.js</span>
+              <span class="tech-item">Node.js</span>
+              <span class="tech-item">Express.js</span>
+              <span class="tech-item">MongoDB Atlas</span>
+              <span class="tech-item">JWT Authentication</span>
+              <span class="tech-item">Tailwind CSS</span>
+              <span class="tech-item">RESTful API</span>
+            </div>
+          </div>
+          
+          <h3 style="margin: 2rem 0 1.5rem; font-family: 'Poppins', sans-serif; color: #111;">System Features</h3>
+          
+          <div class="features-grid">
+            <div class="feature-card">
+              <h4><i class="fas fa-server"></i> RESTful API Backend</h4>
+              <p>Complete CRUD operations for users, products, and categories with proper HTTP methods.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-shield-alt"></i> Secure Authentication</h4>
+              <p>JWT-based authentication system with signup/login and protected routes using Bearer tokens.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-users-cog"></i> Role-Based Access</h4>
+              <p>Three-tier access control: User (customer), Seller (product management), Admin (full control).</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-chart-bar"></i> Analytics & Reports</h4>
+              <p>MongoDB aggregation for user statistics, top spenders, and product analytics with visual dashboards.</p>
+            </div>
+          </div>
+          
+          <h3 style="margin: 2rem 0 1.5rem; font-family: 'Poppins', sans-serif; color: #111;">Project Highlights</h3>
+          
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-code-branch"></i>
+              <span>Built from scratch as individual laboratory project</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-database"></i>
+              <span>NoSQL database design with MongoDB Atlas cloud integration</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-lock"></i>
+              <span>Secure password hashing and token-based authentication</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Advanced analytics using MongoDB aggregation pipeline</span>
+            </div>
+          </div>
+          
+          <div class="back-button">
+            <a href="../index.html#projects">
+              <i class="fas fa-arrow-left"></i> Back to All Projects
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Project Navigation -->
+      <div class="project-nav">
+        <a href="../index.html">
+          <i class="fas fa-home"></i> Back to Home
+        </a>
+        <a href="contact.html">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
+      </div>
+      
+    </div>
   </section>
 
-  <section class="section" id="ecommerce">
-    <h2>Simple E-commerce System</h2>
-    <p>
-      A web-based e-commerce platform for selling beauty products online. Allows customers to browse and purchase products, and provides administrators full control over product and order management.
-    </p>
-    <ul>
-      <li>Customer browsing and shopping cart</li>
-      <li>Secure checkout process</li>
-      <li>Admin dashboard for product and order management</li>
-      <li>Inventory tracking</li>
-    </ul>
-    <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
-    <p><strong>Project Type:</strong> Group Project</p>
-  </section>
-
-  <section class="section" id="salon">
-    <h2>Salon Reservation System (FlexiBook)</h2>
-    <p>
-      FlexiBook Salon is a comprehensive appointment booking system for salons and service-based businesses. It streamlines bookings, provides real-time availability, and offers analytics for business owners.
-    </p>
-    <ul>
-      <li>Customer booking with visual calendar</li>
-      <li>Email confirmations for bookings</li>
-      <li>Admin dashboard and analytics reports</li>
-      <li>Secure JWT authentication</li>
-      <li>Mobile-friendly and responsive design</li>
-    </ul>
-    <p><strong>Technologies Used:</strong> React, Node.js, MongoDB, JWT, CSS</p>
-    <p><strong>Project Type:</strong> Group Project</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Rechelle Borbe</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Rechelle Borbe</h3>
+          <p>Web Systems Developer & IS Student</p>
+          <p>Building the future, one system at a time.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="../index.html#about">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Let's Connect</h4>
+          <div class="social-links">
+            <a href="mailto:chellbe2@gmail.com" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/RechelleBorbe67" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.facebook.com/rechellebelardo.borbe" target="_blank" title="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Rechelle Borbe. All rights reserved.</p>
+        <p>Built with <i class="fas fa-heart"></i> and clean code.</p>
+      </div>
+    </div>
   </footer>
 
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.innerHTML = navMenu.classList.contains('active') 
+          ? '<i class="fas fa-times"></i>' 
+          : '<i class="fas fa-bars"></i>';
+      });
+    }
+    
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        if (menuToggle) {
+          menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      });
+    });
+    
+    // Highlight active project based on URL hash
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+          setTimeout(() => {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,31 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Rechelle Borbe</title>
+  
+  <!-- Same fonts and icons as main page -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Link to main CSS file -->
   <link rel="stylesheet" href="../style.css">
+  
+  <style>
+    /* Additional styles for contact page */
+    .contact-page {
+      padding-top: 120px;
+      min-height: 80vh;
+    }
+    
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .contact-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .contact-header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.8rem;
+      color: #111;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-header p {
+      color: #666;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .contact-info {
+      background: white;
+      border-radius: 15px;
+      padding: 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      margin-bottom: 3rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1.5rem;
+      color: white;
+      font-size: 1.5rem;
+    }
+    
+    .contact-details h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      color: #111;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-details p {
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-link {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .contact-link:hover {
+      color: #764ba2;
+    }
+    
+    .back-home {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .back-home a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.8rem 1.5rem;
+      border: 2px solid #667eea;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    
+    .back-home a:hover {
+      background: #667eea;
+      color: white;
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
 
-  <nav>
-    <h2 class="logo">RB</h2>
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-    </ul>
+  <!-- Navigation (Same as main page) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-text">RB</span>
+        <span class="logo-full">Rechelle Borbe</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="../index.html#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="../index.html#projects"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="../index.html#skills"><i class="fas fa-tools"></i> Skills</a></li>
+        <li><a href="contact.html" class="contact-btn"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </nav>
 
-  <section class="section">
-    <h2>Contact Me</h2>
-    <p>Email: your-email@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-    <p>You can also reach me via LinkedIn or any social media links here.</p>
+  <!-- Contact Content -->
+  <section class="contact-page">
+    <div class="contact-container">
+      <div class="contact-header">
+        <h1>Let's Work Together</h1>
+        <p>I'm always open to discussing web development projects, creative ideas, or opportunities to be part of your vision.</p>
+      </div>
+      
+      <div class="contact-info">
+        <!-- Email -->
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Email Me</h3>
+            <p>For project inquiries or collaboration</p>
+            <a href="mailto:chellbe2@gmail.com" class="contact-link">
+              chellbe2@gmail.com
+            </a>
+          </div>
+        </div>
+        
+        <!-- GitHub -->
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-details">
+            <h3>GitHub</h3>
+            <p>Check out my projects and code</p>
+            <a href="https://github.com/RechelleBorbe67" target="_blank" class="contact-link">
+              github.com/RechelleBorbe67
+            </a>
+          </div>
+        </div>
+        
+        <!-- Facebook -->
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-facebook"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Facebook</h3>
+            <p>Connect with me on Facebook</p>
+            <a href="https://www.facebook.com/rechellebelardo.borbe" target="_blank" class="contact-link">
+              facebook.com/rechellebelardo.borbe
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="back-home">
+        <a href="../index.html">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Rechelle Borbe</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Rechelle Borbe</h3>
+          <p>Web Systems Developer & IS Student</p>
+          <p>Building the future, one system at a time.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#skills">Skills</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Let's Connect</h4>
+          <div class="social-links">
+            <a href="mailto:chellbe2@gmail.com" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/RechelleBorbe67" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.facebook.com/rechellebelardo.borbe" target="_blank" title="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Rechelle Borbe. All rights reserved.</p>
+        <p>Built with <i class="fas fa-heart"></i> and clean code.</p>
+      </div>
+    </div>
   </footer>
 
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.innerHTML = navMenu.classList.contains('active') 
+          ? '<i class="fas fa-times"></i>' 
+          : '<i class="fas fa-bars"></i>';
+      });
+    }
+    
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        if (menuToggle) {
+          menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -3,67 +3,293 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rechelle Borbe | Portfolio</title>
+  <title>Rechelle Borbe | Web Developer</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <h2 class="logo">RB</h2>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="pages/projects.html">Projects</a></li>
-      <li><a href="pages/contact.html">Contact</a></li>
-    </ul>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-text">RB</span>
+        <span class="logo-full">Rechelle Borbe</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+        <li><a href="pages/contact.html" class="contact-btn"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </nav>
 
-  <!-- HERO SECTION -->
+  <!-- Hero Section -->
   <section class="hero">
-    <img src="assets/images/profile.jpg" alt="Profile Photo" class="profile-img">
-    <h1>Hi, I'm Rechelle 👋</h1>
-    <p>Web Systems Developer | IT Student</p>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I am an IT student specializing in web systems development.
-      I build inventory, e-commerce, and reservation systems with
-      a focus on functionality, data accuracy, and user experience.
-    </p>
-  </section>
-
-  <!-- PROJECTS PREVIEW -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="assets/images/project1.png" alt="Inventory System">
-        <h3>Inventory Management System</h3>
-        <p>A data-driven system for inventory tracking and BI analysis.</p>
-        <a href="pages/projects.html#ims">View Details →</a>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/images/project2.png" alt="E-commerce System">
-        <h3>Simple E-commerce System</h3>
-        <p>Online beauty product store with admin management.</p>
-        <a href="pages/projects.html#ecommerce">View Details →</a>
-      </div>
-
-      <div class="project-card">
-        <img src="assets/images/project3.png" alt="Salon System">
-        <h3>Salon Reservation System</h3>
-        <p>Real-time booking system with analytics dashboard.</p>
-        <a href="pages/projects.html#salon">View Details →</a>
+    <div class="hero-container">
+      <div class="hero-content">
+        <img src="assets/images/profile.jpg" alt="Rechelle Borbe" class="profile-img">
+        <h1 class="hero-title">Hi, I'm Rechelle 👋</h1>
+        <p class="hero-subtitle">Web Systems Developer | Information Systems Student</p>
+        <p class="hero-description">
+          I build functional, data-driven web applications with clean code and real-world solutions.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">
+            <i class="fas fa-eye"></i> View My Work
+          </a>
+          <a href="assets/Rechelle_Borbe_CV.pdf" class="btn-secondary" target="_blank">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Rechelle Borbe</p>
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm an Information Systems student passionate about developing practical web solutions. 
+            I specialize in creating <strong>data-driven systems</strong> that solve real business problems 
+            like inventory management, e-commerce, and appointment booking.
+          </p>
+          <p>
+            My approach combines <strong>clean design</strong> with <strong>robust functionality</strong>, 
+            focusing on user experience, system efficiency, and scalable architecture.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <i class="fas fa-graduation-cap"></i>
+              <span>IS Student | Web Development</span>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Available for Projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Frontend</h3>
+          <div class="skill-items">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>React</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-items">
+            <span>PHP</span>
+            <span>Node.js</span>
+            <span>Express.js</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-database"></i> Database</h3>
+          <div class="skill-items">
+            <span>MySQL</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Tools</h3>
+          <div class="skill-items">
+            <span>Git & GitHub</span>
+            <span>VS Code</span>
+            <span>XAMPP</span>
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Projects Section -->
+<section id="projects" class="section projects">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">Real-world systems I've developed from concept to deployment</p>
+    
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="assets/images/project1.png" alt="Inventory Management System">
+          <div class="project-tags">
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>Python</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Inventory Management System</h3>
+          <p>
+            A comprehensive system for tracking stock, analyzing data, and optimizing 
+            database performance with batch processing and cloud deployment.
+          </p>
+          <div class="project-features">
+            <span><i class="fas fa-check"></i> BI Analytics</span>
+            <span><i class="fas fa-check"></i> Cloud Ready</span>
+            <span><i class="fas fa-check"></i> Performance Optimized</span>
+          </div>
+          <a href="pages/projects.html#ims" class="project-link">
+            View Project Details <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="assets/images/project2.png" alt="E-commerce System">
+          <div class="project-tags">
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>Dough-to-Door Online Ordering</h3>
+          <p>
+            Full-featured e-commerce platform with customer shopping cart, 
+            admin product management, and secure checkout system.
+          </p>
+          <div class="project-features">
+            <span><i class="fas fa-check"></i> Full CRUD Operations</span>
+            <span><i class="fas fa-check"></i> Admin Dashboard</span>
+            <span><i class="fas fa-check"></i> Responsive Design</span>
+          </div>
+          <a href="pages/projects.html#dough" class="project-link">
+            View Project Details <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="assets/images/project3.png" alt="Salon Booking System">
+          <div class="project-tags">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>FlexiBook Salon Reservation</h3>
+          <p>
+            Real-time appointment booking system with analytics dashboard, 
+            role-based access, and mobile-first responsive design.
+          </p>
+          <div class="project-features">
+            <span><i class="fas fa-check"></i> Real-time Booking</span>
+            <span><i class="fas fa-check"></i> Analytics Dashboard</span>
+            <span><i class="fas fa-check"></i> JWT Authentication</span>
+          </div>
+          <a href="pages/projects.html#salon" class="project-link">
+            View Project Details <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 4 - SHOPHUB SYSTEM (FIXED) -->
+      <div class="project-card">
+        <div class="project-image"> <!-- ADD THIS WRAPPER DIV -->
+          <img src="assets/images/project4.png" alt="ShopHub E-commerce System">
+          <div class="project-tags"> <!-- ADD THESE TAGS -->
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3>ShopHub – Full-Stack E-commerce</h3>
+          <p>
+            Individual full-stack project with RESTful API, JWT authentication, 
+            role-based access, and MongoDB analytics. Built with MERN stack.
+          </p>
+          <div class="project-features">
+            <span><i class="fas fa-check"></i> RESTful API</span>
+            <span><i class="fas fa-check"></i> JWT Auth</span>
+            <span><i class="fas fa-check"></i> MongoDB</span>
+          </div>
+          <a href="pages/projects.html#shophub" class="project-link">
+            View Project Details <i class="fas fa-arrow-right"></i>
+          </a>
+          <div class="project-tag-individual">
+            <i class="fas fa-user"></i> Individual Project
+          </div>
+        </div>
+      </div>
+      
+    </div> <!-- CLOSING .projects-grid DIV -->
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Rechelle Borbe</h3>
+          <p>Web Systems Developer & IS Student</p>
+          <p>Growing as a developer through real system projects</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="pages/contact.html">Contact</a>
+        </div>
+        
+        <div class="social-links">
+  <a href="mailto:rechelle@example.com" title="Email">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="https://github.com/RechelleBorbe67" target="_blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://facebook.com/your-profile" target="_blank" title="Facebook">
+    <i class="fab fa-facebook"></i>
+  </a>
+</div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Rechelle Borbe. All rights reserved.</p>
+        <p>Built with <i class="fas fa-heart"></i> and clean code.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
