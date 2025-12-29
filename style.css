@@ -656,3 +656,39 @@ body {
   font-size: 1.1rem;
   width: 24px;
 }
+
+/* Project Role Badge */
+.project-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 10px rgba(76, 175, 80, 0.2);
+}
+
+.project-role i {
+  font-size: 0.9rem;
+}
+
+/* Different colors for different roles */
+.project-role.team-leader {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+}
+
+.project-role.frontend {
+  background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);
+}
+
+.project-role.backend {
+  background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+}
+
+.project-role.individual {
+  background: linear-gradient(135deg, #607D8B 0%, #455A64 100%);
+}
