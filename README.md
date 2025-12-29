@@ -1,75 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rechelle Borbe | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+# 🌐 Rechelle Borbe – Portfolio Website
 
-  <!-- NAVBAR -->
-  <nav>
-    <h2 class="logo">RB</h2>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="pages/contact.html">Contact</a></li>
-    </ul>
-  </nav>
+This repository contains my personal portfolio website showcasing my academic and personal projects in web systems development. It highlights my skills, technologies, and hands-on experience as an Information Systems student.
 
-  <!-- HERO -->
-  <section class="hero">
-    <img src="assets/images/profile.jpg" alt="Profile Photo" class="profile-img">
-    <h1>Hi, I'm Rechelle 👋</h1>
-    <p>Web Systems Developer | IT Student</p>
-  </section>
+## 🔗 Live Portfolio
+**https://rechelleborbe67.github.io/**
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I am an IT student specializing in web systems development.
-      I build inventory, e-commerce, and reservation systems with
-      a focus on functionality, data accuracy, and user experience.
-    </p>
-  </section>
+---
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
+## 📌 About Me
 
-    <div class="projects-grid">
+I am an Information Systems student passionate about building functional, real-world web systems. My experience includes developing inventory management systems, e-commerce platforms, reservation systems, and RESTful APIs using modern technologies.
 
-      <div class="project-card">
-        <img src="assets/images/project1.png" alt="Inventory System">
-        <h3>Inventory Management System</h3>
-        <p>Data-driven system for inventory tracking and BI analysis.</p>
-        <a href="pages/projects.html">View Details →</a>
-      </div>
+---
 
-      <div class="project-card">
-        <img src="assets/images/project2.png" alt="E-commerce System">
-        <h3>Simple E-commerce System</h3>
-        <p>Online beauty product store with admin management.</p>
-        <a href="pages/projects.html">View Details →</a>
-      </div>
+## 💼 Featured Projects
 
-      <div class="project-card">
-        <img src="assets/images/project3.png" alt="Salon System">
-        <h3>Salon Reservation System</h3>
-        <p>Real-time booking system with analytics dashboard.</p>
-        <a href="pages/projects.html">View Details →</a>
-      </div>
+### 📦 Inventory Management System
+Enterprise-style system for tracking and optimizing inventory operations. Includes business intelligence reports and database optimization.
 
-    </div>
-  </section>
+**Technologies:** PHP, MySQL, Python, Faker, JavaScript, Bootstrap  
+**Role:** Team Leader (Group Project)
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Rechelle Borbe</p>
-  </footer>
+### 🍞 Dough-to-Door Online Ordering System
+Full e-commerce platform for a bakery business with customer storefront and admin dashboard.
 
-  <script src="script.js"></script>
-</body>
-</html>
+**Technologies:** PHP, MySQL, HTML, CSS, JavaScript, XAMPP  
+**Role:** Team Leader (Group Project)
+
+### 💇 FlexiBook Salon Reservation System
+Real-time appointment booking system with analytics dashboard and role-based access.
+
+**Technologies:** React.js, Node.js, Express.js, MongoDB, JWT, Chart.js  
+**Role:** Frontend Developer (Group Project)
+
+### 🛒 ShopHub – Full-Stack E-commerce & API System
+Individual full-stack project with RESTful APIs, JWT authentication, and role-based access (User, Seller, Admin).
+
+**Technologies:** React.js, Node.js, Express.js, MongoDB Atlas, JWT, Tailwind CSS  
+**Project Type:** Individual Project
+
+---
+
+## 🛠️ Technologies Used
+
+**Frontend:** HTML5, CSS3, JavaScript, React.js, Bootstrap, Tailwind CSS  
+**Backend:** PHP, Node.js, Express.js  
+**Databases:** MySQL, MongoDB Atlas  
+**Tools & Platforms:** Git & GitHub, VS Code, XAMPP, MySQL Workbench, Thunder Client  
+**Concepts:** RESTful APIs, JWT Authentication, Role-Based Access Control, CRUD Operations
+
+---
+
+## 📄 Curriculum Vitae
+
+Download my CV: [Rechelle_Borbe_CV.pdf](assets/Rechelle_Borbe_CV.pdf)
+
+---
+
+## 🚀 Deployment
+
+This portfolio is deployed using **GitHub Pages**.
+
+**Repository:** `RechelleBorbe67.github.io`  
+**Branch:** `main`  
+**URL:** https://rechelleborbe67.github.io/
+
+---
+
+## 📬 Contact
+
+- **Email:** [chellbe2@gmail.com](mailto:chellbe2@gmail.com)
+- **GitHub:** [github.com/RechelleBorbe67](https://github.com/RechelleBorbe67)
+- **Portfolio:** [rechelleborbe67.github.io](https://rechelleborbe67.github.io/)
+
+---
+
+## 📜 License
+
+This project is for **academic and personal portfolio purposes** only.
+© 2024 Rechelle Borbe. All rights reserved.
