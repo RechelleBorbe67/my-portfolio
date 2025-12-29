@@ -44,7 +44,7 @@ Individual full-stack project with RESTful APIs, JWT authentication, and role-ba
 ## 🛠️ Technologies Used
 
 **Frontend:** HTML5, CSS3, JavaScript, React.js, Bootstrap, Tailwind CSS  
-**Backend:** PHP, Node.js, Express.js  
+**Backend:** PHP, Node.js, Express.js, Python
 **Databases:** MySQL, MongoDB Atlas  
 **Tools & Platforms:** Git & GitHub, VS Code, XAMPP, MySQL Workbench, Thunder Client  
 **Concepts:** RESTful APIs, JWT Authentication, Role-Based Access Control, CRUD Operations
