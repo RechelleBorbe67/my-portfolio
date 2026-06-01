@@ -99,6 +99,33 @@
       margin-bottom: 2rem;
     }
     
+    /* Role Badges */
+    .project-role-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+      color: white;
+      padding: 0.6rem 1.3rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 3px 10px rgba(33, 150, 243, 0.2);
+    }
+    
+    .project-role-badge.individual {
+      background: linear-gradient(135deg, #607D8B 0%, #455A64 100%);
+    }
+    
+    .project-role-badge.capstone {
+      background: linear-gradient(135deg, #FF6B6B 0%, #EE5A24 100%);
+    }
+    
+    .project-role-badge .role-icon {
+      font-size: 1rem;
+    }
+    
     /* Features Grid */
     .features-grid {
       display: grid;
@@ -165,6 +192,35 @@
       background: #667eea;
       color: white;
       transform: translateY(-2px);
+    }
+    
+    /* Project Highlights */
+    .project-highlights {
+      background: #f8f9ff;
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 2rem 0;
+    }
+    
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      background: white;
+      border-radius: 10px;
+      border-left: 4px solid #667eea;
+    }
+    
+    .highlight-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .highlight-item i {
+      color: #667eea;
+      font-size: 1.1rem;
+      width: 24px;
     }
     
     /* Back Button */
@@ -275,9 +331,8 @@
         <p>Explore the full-stack systems we've built, from concept to deployment. Each project showcases my skills in problem-solving, system architecture, and user-centered design.</p>
       </div>
 
-      <!-- Inventory Management System -->
+      <!-- PROJECT 1: Inventory Management System -->
       <section id="ims" class="project-details">
-        
         <div class="project-hero">
           <img src="../assets/images/project1.png" alt="Inventory Management System">
           <div class="project-tags">
@@ -291,9 +346,9 @@
         <div class="project-content">
           <h2 class="project-title">Inventory Management System</h2>
           <div class="project-role-badge">
-  <span class="role-icon"><i class="fas fa-users"></i></span>
-  <span class="role-text">Group Project | Team Leader</span>
-</div>
+            <span class="role-icon"><i class="fas fa-users"></i></span>
+            <span class="role-text">Group Project | Team Leader</span>
+          </div>
           
           <p class="project-description">
             A comprehensive enterprise solution designed to track, analyze, and optimize inventory operations. 
@@ -345,7 +400,7 @@
         </div>
       </section>
 
-      <!-- E-commerce System -->
+      <!-- PROJECT 2: Dough-to-Door E-commerce System -->
       <section id="dough" class="project-details">
         <div class="project-hero">
           <img src="../assets/images/project2.png" alt="E-commerce System">
@@ -360,9 +415,9 @@
         <div class="project-content">
           <h2 class="project-title">Dough-to-Door Online Ordering System</h2>
           <div class="project-role-badge">
-  <span class="role-icon"><i class="fas fa-users"></i></span>
-  <span class="role-text">Group Project | Team Leader</span>
-</div>
+            <span class="role-icon"><i class="fas fa-users"></i></span>
+            <span class="role-text">Group Project | Team Leader</span>
+          </div>
           
           <p class="project-description">
             A complete e-commerce platform for a bakery business, featuring a customer-facing storefront 
@@ -414,7 +469,7 @@
         </div>
       </section>
 
-      <!-- Salon Reservation System -->
+      <!-- PROJECT 3: FlexiBook Salon Reservation System -->
       <section id="salon" class="project-details">
         <div class="project-hero">
           <img src="../assets/images/project3.png" alt="Salon Reservation System">
@@ -429,9 +484,9 @@
         <div class="project-content">
           <h2 class="project-title">FlexiBook Salon Reservation System</h2>
           <div class="project-role-badge">
-  <span class="role-icon"><i class="fas fa-users"></i></span>
-  <span class="role-text">Group Project – Frontend Developer (with Backend Collaboration)</span>
-</div>
+            <span class="role-icon"><i class="fas fa-users"></i></span>
+            <span class="role-text">Group Project | Frontend Developer (with Backend Collaboration)</span>
+          </div>
           
           <p class="project-description">
             A modern, real-time appointment booking system built with MERN stack. The platform features 
@@ -483,7 +538,7 @@
         </div>
       </section>
 
-            <!-- ShopHub E-commerce System -->
+      <!-- PROJECT 4: ShopHub E-commerce System -->
       <section id="shophub" class="project-details">
         <div class="project-hero">
           <img src="../assets/images/project4.png" alt="ShopHub E-commerce System">
@@ -497,10 +552,10 @@
         
         <div class="project-content">
           <h2 class="project-title">ShopHub – Full-Stack E-commerce & API System</h2>
-         <div class="project-role-badge individual">
-  <span class="role-icon"><i class="fas fa-user"></i></span>
-  <span class="role-text">Individual Project | Full Stack</span>
-</div>
+          <div class="project-role-badge individual">
+            <span class="role-icon"><i class="fas fa-user"></i></span>
+            <span class="role-text">Individual Project | Full Stack</span>
+          </div>
           
           <p class="project-description">
             ShopHub is a full-stack web system developed as an individual laboratory repository project 
@@ -563,6 +618,121 @@
             <div class="highlight-item">
               <i class="fas fa-chart-line"></i>
               <span>Advanced analytics using MongoDB aggregation pipeline</span>
+            </div>
+          </div>
+          
+          <div class="back-button">
+            <a href="../index.html#projects">
+              <i class="fas fa-arrow-left"></i> Back to All Projects
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECT 5: SchoolLink+ Capstone Project -->
+      <section id="schoollink" class="project-details">
+        <div class="project-hero">
+          <img src="../assets/images/project5.png" alt="SchoolLink+ Portal">
+          <div class="project-tags">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">RAD</span>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <h2 class="project-title">SchoolLink+ – Student Organization & Guidance Assessment Portal</h2>
+          <div class="project-role-badge capstone">
+            <span class="role-icon"><i class="fas fa-graduation-cap"></i></span>
+            <span class="role-text">Capstone Project | Team Leader</span>
+          </div>
+          
+          <p class="project-description">
+            SchoolLink+ is a centralized web portal designed for Itaran National High School to streamline 
+            student organization management and guidance assessment processes. The system features a 
+            customizable assessment builder that allows the guidance counselor to create, manage, and 
+            distribute personality tests and evaluation forms independently — without developer access 
+            to student responses, ensuring compliance with the Data Privacy Act of 2012.
+          </p>
+          
+          <div class="tech-stack">
+            <h3>Technology Stack</h3>
+            <div class="tech-items">
+              <span class="tech-item">HTML5/CSS3</span>
+              <span class="tech-item">JavaScript</span>
+              <span class="tech-item">PHP</span>
+              <span class="tech-item">MySQL</span>
+              <span class="tech-item">XAMPP</span>
+              <span class="tech-item">Bootstrap 5</span>
+              <span class="tech-item">RAD Methodology</span>
+            </div>
+          </div>
+          
+          <h3 style="margin: 2rem 0 1.5rem; font-family: 'Poppins', sans-serif; color: #111;">Core Modules</h3>
+          
+          <div class="features-grid">
+            <div class="feature-card">
+              <h4><i class="fas fa-users"></i> Student Organization Hub</h4>
+              <p>Centralized platform for student organizations to post announcements, manage events, and engage members — replacing fragmented Facebook group chats and manual coordination.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-building"></i> Customizable Assessment Builder</h4>
+              <p>Privacy-wall feature allowing guidance counselors to create, edit, and manage personality tests and evaluation forms independently. Developers and admins cannot access student responses.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-bell"></i> Dual Notification System</h4>
+              <p>Web push notifications and email alerts for organization updates and assessment reminders, ensuring no student misses important announcements.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-chart-simple"></i> Analytics & Reporting</h4>
+              <p>Guidance counselors can generate reports on assessment activities and extract data by student, grade level, section, or entire school population.</p>
+            </div>
+          </div>
+          
+          <h3 style="margin: 2rem 0 1.5rem; font-family: 'Poppins', sans-serif; color: #111;">Key Features</h3>
+          
+          <div class="features-grid">
+            <div class="feature-card">
+              <h4><i class="fas fa-lock"></i> Role-Based Access Control</h4>
+              <p>Four user roles: System Administrator, Guidance Counselor, Organization Officer, and Student — each with specific permissions and dashboards.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-shield-alt"></i> Data Privacy Compliance</h4>
+              <p>Built in compliance with Republic Act No. 10173 (Data Privacy Act of 2012). Student assessment responses are accessible only to the Guidance Counselor.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-mobile-alt"></i> Responsive Design</h4>
+              <p>Fully responsive interface accessible on desktop and mobile web browsers without requiring a native mobile application.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4><i class="fas fa-check-circle"></i> LRN Validation</h4>
+              <p>Secure student registration with Learner Reference Number (LRN) verification against the official school list.</p>
+            </div>
+          </div>
+          
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-trophy"></i>
+              <span>Capstone Project for Bachelor of Science in Information Systems</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-school"></i>
+              <span>Developed for Itaran National High School, Polangui, Albay</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Evaluated using ISO/IEC 25010 quality standards (Functional Suitability, Interaction Capability, Security)</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-sync-alt"></i>
+              <span>Built using Rapid Application Development (RAD) methodology for iterative prototyping and user feedback</span>
             </div>
           </div>
           
