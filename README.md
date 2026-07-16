@@ -1,81 +1,195 @@
-# 🌐 Rechelle Borbe – Portfolio Website
+# 🌐 Rechelle Borbe – Personal Portfolio Website
 
-This repository contains my personal portfolio website showcasing my academic and personal projects in web systems development. It highlights my skills, technologies, and hands-on experience as an Information Systems student.
-
-## 🔗 Live Portfolio
-**https://rechelleborbe67.github.io/**
+> A responsive personal portfolio website showcasing my web development projects, technical skills, and academic experience as a Bachelor of Science in Information Systems student.
 
 ---
 
-## 📌 About Me
+## 📌 About the Project
 
-I am an Information Systems student passionate about building functional, real-world web systems. My experience includes developing inventory management systems, e-commerce platforms, reservation systems, and RESTful APIs using modern technologies.
+This portfolio serves as a central hub for my software development projects, technical skills, and professional profile. It highlights my experience in designing and developing practical web applications that solve real-world problems using modern web technologies.
+
+Whether you're a recruiter, instructor, or fellow developer, this website provides an overview of my projects, development journey, and technical capabilities.
+
+🔗 **Live Portfolio**
+
+https://rechelleborbe67.github.io/
 
 ---
 
-## 💼 Featured Projects
+## ✨ Portfolio Features
 
-### 📦 Inventory Management System
-Enterprise-style system for tracking and optimizing inventory operations. Includes business intelligence reports and database optimization.
+- Responsive and modern user interface
+- Project showcase with detailed information
+- Technical skills overview
+- Downloadable résumé
+- Contact information
+- GitHub repository links
+- Mobile-friendly design
 
-**Technologies:** PHP, MySQL, Python, Faker, JavaScript, Bootstrap  
-**Role:** Team Leader (Group Project)
+---
 
-### 🍞 Dough-to-Door Online Ordering System
-Full e-commerce platform for a bakery business with customer storefront and admin dashboard.
+# 💼 Featured Projects
 
-**Technologies:** PHP, MySQL, HTML, CSS, JavaScript, XAMPP  
-**Role:** Team Leader (Group Project)
+## 🚀 Individual Projects
 
-### 💇 FlexiBook Salon Reservation System
-Real-time appointment booking system with analytics dashboard and role-based access.
+### 🛒 ShopHub – Full-Stack E-commerce Platform
 
-**Technologies:** React.js, Node.js, Express.js, MongoDB, JWT, Chart.js  
-**Role:** Frontend Developer (Group Project)
+A MERN-stack e-commerce platform featuring secure authentication, RESTful APIs, role-based access control, and responsive web interfaces.
 
-### 🛒 ShopHub – Full-Stack E-commerce & API System
-Individual full-stack project with RESTful APIs, JWT authentication, and role-based access (User, Seller, Admin).
-
-**Technologies:** React.js, Node.js, Express.js, MongoDB Atlas, JWT, Tailwind CSS  
 **Project Type:** Individual Project
 
----
+**Role:** Full Stack Developer
 
-## 🛠️ Technologies Used
-
-**Frontend:** HTML5, CSS3, JavaScript, React.js, Bootstrap, Tailwind CSS  
-**Backend:** PHP, Node.js, Express.js, Python
-**Databases:** MySQL, MongoDB Atlas  
-**Tools & Platforms:** Git & GitHub, VS Code, XAMPP, MySQL Workbench, Thunder Client  
-**Concepts:** RESTful APIs, JWT Authentication, Role-Based Access Control, CRUD Operations
+**Technologies:** React.js, Node.js, Express.js, MongoDB Atlas, Tailwind CSS
 
 ---
 
-## 📄 Curriculum Vitae
+## 👥 Team Projects
 
-Download my CV: [Rechelle_Borbe_CV.pdf](assets/Rechelle_Borbe_CV.pdf)
+### 📊 WEB-SYSTEM-REVERIE – Admin Dashboard & Client Management
+
+A comprehensive administrative and client management system designed to streamline business operations through dashboard analytics, order processing, reporting, and role-based access control.
+
+**Project Type:** Group Project
+
+**Role:** Full Stack Developer
+
+**Technologies:** PHP, MySQL, JavaScript, HTML5, CSS3, XAMPP
+
+**Highlights**
+
+- Admin Dashboard
+- Client Management
+- Order Processing
+- Reports & Analytics
+- Database Design
+- Data Flow Diagrams
+- 76 commits across two years of development
 
 ---
 
-## 🚀 Deployment
+### 📦 Inventory Management System
 
-This portfolio is deployed using **GitHub Pages**.
+Enterprise-style inventory management system designed to optimize stock monitoring, reporting, and database performance.
 
-**Repository:** `RechelleBorbe67.github.io`  
-**Branch:** `main`  
-**URL:** https://rechelleborbe67.github.io/
+**Project Type:** Group Project
 
----
+**Role:** Team Leader
 
-## 📬 Contact
-
-- **Email:** [chellbe2@gmail.com](mailto:chellbe2@gmail.com)
-- **GitHub:** [github.com/RechelleBorbe67](https://github.com/RechelleBorbe67)
-- **Portfolio:** [rechelleborbe67.github.io](https://rechelleborbe67.github.io/)
+**Technologies:** PHP, MySQL, Python, JavaScript, Bootstrap
 
 ---
 
-## 📜 License
+### 🥐 Dough-to-Door Online Ordering System
 
-This project is for **academic and personal portfolio purposes** only.
-© 2024 Rechelle Borbe. All rights reserved.
+A bakery e-commerce platform featuring customer ordering, product management, and an administrator dashboard.
+
+**Project Type:** Group Project
+
+**Role:** Team Leader
+
+**Technologies:** PHP, MySQL, HTML, CSS, JavaScript
+
+---
+
+### 💇 FlexiBook – Salon Appointment Booking System
+
+A salon reservation platform featuring appointment scheduling, analytics, role-based access control, and responsive interfaces.
+
+**Project Type:** Group Project
+
+**Role:** Frontend Developer (Backend Collaboration)
+
+**Technologies:** React.js, Node.js, Express.js, MongoDB
+
+---
+
+## 🎓 Capstone Project
+
+### SchoolLink+ – Student Organization & Guidance Portal
+
+A centralized portal developed for Itaran National High School that streamlines student organization management and guidance assessment while supporting privacy-focused workflows.
+
+**Project Type:** Capstone Project
+
+**Role:** Team Leader
+
+**Technologies:** PHP, MySQL, Bootstrap
+
+---
+
+# 🛠️ Technology Stack
+
+## Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- React.js
+- Bootstrap
+- Tailwind CSS
+
+## Backend
+
+- PHP
+- Node.js
+- Express.js
+- Python
+
+## Database
+
+- MySQL
+- MongoDB Atlas
+
+## Development Tools
+
+- Git & GitHub
+- Visual Studio Code
+- XAMPP
+- MySQL Workbench
+- Thunder Client
+- Figma
+
+---
+
+# 🚀 Running the Portfolio Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/RechelleBorbe67/RechelleBorbe67.github.io.git
+```
+
+Open the project folder and launch `index.html` in your preferred web browser.
+
+---
+
+# 📄 Resume
+
+My latest résumé is available for download directly from the portfolio website.
+
+---
+
+# 👩‍💻 Developer
+
+**Rechelle Borbe**
+
+Bachelor of Science in Information Systems
+
+Bicol University Polangui
+
+📧 **Email:** chellbe2@gmail.com
+
+🌐 **Portfolio:**  
+https://rechelleborbe67.github.io/
+
+💻 **GitHub:**  
+https://github.com/RechelleBorbe67
+
+---
+
+# 📄 License
+
+This project is intended for personal portfolio.
+
+© 2026 Rechelle Borbe. All rights reserved.
